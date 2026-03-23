@@ -30,346 +30,306 @@
             background-color: var(--primary-color);
             color: #fff;
             border: none;
-            padding: 10px 20px;
+            padding: 12px 30px;
             font-size: 16px;
             cursor: pointer;
             border-radius: 5px;
-            transition: all 0.3s;
+            font-weight: 600;
+            transition: all 0.3s ease;
         }
         .btn:hover {
             background-color: #2ecc71;
-            transform: scale(1.05);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
         }
         /* Hero Section Styles */
         .hero {
-            background: linear-gradient(135deg, #3498db 0%, #2ecc71 100%);
-            min-height: 100vh;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
             color: #fff;
             text-align: center;
-            padding: 40px 20px;
+        }
+        .hero-content {
+            max-width: 600px;
+            animation: fadeInUp 0.8s ease;
         }
         .hero h1 {
             font-size: 56px;
             font-weight: 700;
-            margin-bottom: 10px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+            margin-bottom: 20px;
+            letter-spacing: -1px;
         }
         .hero p {
             font-size: 20px;
             margin-bottom: 30px;
             opacity: 0.95;
         }
-        /* Features Section Styles */
-        .features-section {
-            padding: 60px 20px;
-            background-color: #fff;
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
-        .features-section h2 {
+        /* Features Section Styles */
+        .section-title {
             text-align: center;
-            font-size: 36px;
-            margin-bottom: 40px;
+            font-size: 42px;
+            font-weight: 700;
+            margin: 60px 0 40px 0;
+            color: #333;
         }
         .features {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            gap: 20px;
+            gap: 30px;
+            padding: 40px 20px;
         }
         .feature {
-            background-color: #f9f9f9;
+            background-color: #fff;
             padding: 30px;
-            border: 1px solid #ddd;
             border-radius: 10px;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
             width: calc(33.33% - 20px);
-            transition: transform 0.3s;
+            text-align: center;
+            transition: transform 0.3s ease;
         }
         .feature:hover {
             transform: translateY(-5px);
-            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
         }
-        .feature h3 {
-            font-size: 24px;
+        .feature-icon {
+            font-size: 40px;
+            margin-bottom: 15px;
+        }
+        .feature h2 {
+            font-size: 22px;
             font-weight: 600;
-            margin-bottom: 10px;
-            color: #3498db;
+            margin-bottom: 15px;
         }
         .feature p {
-            font-size: 16px;
+            font-size: 15px;
             color: #666;
+            line-height: 1.8;
         }
         /* Pricing Section Styles */
-        .pricing-section {
-            padding: 60px 20px;
-            background: linear-gradient(135deg, #f9f9f9 0%, #e8f4f8 100%);
-        }
-        .pricing-section h2 {
-            text-align: center;
-            font-size: 36px;
-            margin-bottom: 40px;
-        }
         .pricing {
             display: flex;
             justify-content: center;
+            gap: 30px;
+            padding: 40px 20px;
             flex-wrap: wrap;
-            gap: 20px;
         }
         .price {
             background-color: #fff;
-            padding: 40px;
-            border: 2px solid #3498db;
-            border-radius: 15px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-            width: 100%;
-            max-width: 500px;
+            padding: 40px 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
             text-align: center;
-            transition: transform 0.3s;
+            width: 400px;
+            border: 2px solid #667eea;
         }
-        .price:hover {
-            transform: scale(1.02);
-        }
-        .price h3 {
+        .price h2 {
             font-size: 28px;
-            font-weight: 600;
+            font-weight: 700;
             margin-bottom: 10px;
         }
-        .price .amount {
+        .price-amount {
             font-size: 48px;
             font-weight: 700;
-            color: #3498db;
+            color: #667eea;
             margin: 20px 0;
         }
-        .price .period {
+        .price-period {
+            color: #666;
             font-size: 16px;
-            color: #666;
-            margin-bottom: 30px;
+            margin-bottom: 20px;
         }
-        .price ul {
+        .price-features {
             text-align: left;
-            margin-bottom: 30px;
-            list-style: none;
-            padding: 0;
+            margin: 25px 0;
+            font-size: 14px;
+            color: #555;
         }
-        .price li {
-            padding: 10px 0;
+        .price-features li {
+            padding: 8px 0;
             border-bottom: 1px solid #eee;
-            color: #666;
-        }
-        .price li:before {
-            content: "✓ ";
-            color: #2ecc71;
-            font-weight: bold;
-            margin-right: 10px;
         }
         /* FAQ Section Styles */
-        .faq-section {
-            padding: 60px 20px;
-            background-color: #fff;
-        }
-        .faq-section h2 {
-            text-align: center;
-            font-size: 36px;
-            margin-bottom: 40px;
-        }
         .faq {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 20px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            padding: 40px 20px;
         }
         .question {
-            background-color: #f9f9f9;
+            background-color: #fff;
             padding: 25px;
             border-radius: 10px;
-            width: calc(50% - 20px);
-            border-left: 4px solid #3498db;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
         }
         .question h3 {
             font-size: 18px;
             font-weight: 600;
-            margin-bottom: 10px;
+            margin-bottom: 12px;
             color: #333;
         }
         .question p {
             font-size: 14px;
             color: #666;
-            margin: 0;
+            line-height: 1.6;
         }
         /* Testimonials Section Styles */
-        .testimonials-section {
-            padding: 60px 20px;
-            background: linear-gradient(135deg, #e8f4f8 0%, #f9f9f9 100%);
-        }
-        .testimonials-section h2 {
-            text-align: center;
-            font-size: 36px;
-            margin-bottom: 40px;
-        }
         .testimonials {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            gap: 20px;
+            gap: 30px;
+            padding: 40px 20px;
         }
         .testimonial {
             background-color: #fff;
-            padding: 25px;
+            padding: 30px;
             border-radius: 10px;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-            width: calc(50% - 20px);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+            width: calc(50% - 15px);
+            border-left: 4px solid #667eea;
         }
-        .testimonial .author {
-            font-size: 16px;
+        .testimonial-name {
             font-weight: 600;
-            color: #3498db;
-            margin-bottom: 5px;
-        }
-        .testimonial .role {
-            font-size: 12px;
-            color: #999;
-            margin-bottom: 15px;
+            margin-bottom: 8px;
+            color: #333;
         }
         .testimonial p {
             font-size: 14px;
             color: #666;
             font-style: italic;
+            line-height: 1.6;
+        }
+        .testimonial-rating {
+            color: #f39c12;
+            margin-bottom: 10px;
         }
         /* Footer */
         footer {
-            background-color: #333;
+            background: #333;
             color: #fff;
             text-align: center;
-            padding: 20px;
+            padding: 30px;
             margin-top: 40px;
         }
+        /* Responsive */
         @media (max-width: 768px) {
-            .feature, .question, .testimonial {
-                width: 100% !important;
-            }
             .hero h1 {
                 font-size: 36px;
+            }
+            .feature, .testimonial {
+                width: 100% !important;
+            }
+            .faq {
+                grid-template-columns: 1fr;
+            }
+            .price {
+                width: 100%;
             }
         }
     </style>
 </head>
 <body>
     <!-- Hero Section -->
-    <div class="hero">
-        <div class="container">
+    <section class="hero">
+        <div class="hero-content">
             <h1>🚀 AI Email Automator Pro</h1>
-            <p>Automate your email sequences with the power of AI</p>
-            <p style="font-size: 16px; opacity: 0.9;">Generate personalized email sequences in seconds</p>
-            <a href="#pricing" class="btn" style="margin-top: 20px; padding: 15px 30px; font-size: 18px;">Get Started Now</a>
+            <p>Automate your email sequences with AI. Save time. Increase conversions.</p>
+            <a href="#pricing" class="btn">Get Started Now</a>
         </div>
-    </div>
+    </section>
 
-    <!-- Features Section -->
-    <div class="features-section">
-        <div class="container">
-            <h2>Why Choose AI Email Automator Pro?</h2>
-            <div class="features">
-                <div class="feature">
-                    <h3>⚡ AI-Powered</h3>
-                    <p>Our advanced AI generates personalized email sequences that drive engagement and conversions</p>
-                </div>
-                <div class="feature">
-                    <h3>⏱️ Save Time</h3>
-                    <p>Automate repetitive email tasks and focus on growing your business</p>
-                </div>
-                <div class="feature">
-                    <h3>📊 Real-Time Analytics</h3>
-                    <p>Track open rates, click rates, and conversions with detailed analytics</p>
-                </div>
+    <div class="container">
+        <!-- Features Section -->
+        <h2 class="section-title">Powerful Features</h2>
+        <div class="features">
+            <div class="feature">
+                <div class="feature-icon">✨</div>
+                <h2>AI-Powered Generation</h2>
+                <p>Our advanced AI algorithm generates personalized email sequences that resonate with your audience</p>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">⚙️</div>
+                <h2>Automated Sequences</h2>
+                <p>Set up automated email workflows that save time and increase productivity automatically</p>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">📊</div>
+                <h2>Real-Time Analytics</h2>
+                <p>Track open rates, click-through rates, and conversions with our comprehensive analytics dashboard</p>
             </div>
         </div>
-    </div>
 
-    <!-- Pricing Section -->
-    <div class="pricing-section">
-        <div class="container">
-            <h2>Simple, Transparent Pricing</h2>
-            <div class="pricing" id="pricing">
-                <div class="price">
-                    <h3>Professional Plan</h3>
-                    <div class="amount">$29</div>
-                    <div class="period">per month</div>
-                    <ul>
-                        <li>Unlimited email sequences</li>
-                        <li>AI-powered content generation</li>
-                        <li>Advanced analytics dashboard</li>
-                        <li>24/7 email support</li>
-                        <li>API access</li>
-                        <li>Custom integrations</li>
-                    </ul>
-                    <a href="javascript:alert('Payment integration coming soon! Sign up at support@aiemailautomator.com')" class="btn" style="width: 100%; padding: 15px;">Subscribe Now</a>
-                </div>
+        <!-- Pricing Section -->
+        <h2 class="section-title" id="pricing">Simple Pricing</h2>
+        <div class="pricing">
+            <div class="price">
+                <h2>Pro Plan</h2>
+                <div class="price-amount">$29</div>
+                <div class="price-period">per month</div>
+                <ul class="price-features">
+                    <li>✓ Unlimited email sequences</li>
+                    <li>✓ AI-powered generation</li>
+                    <li>✓ Real-time analytics</li>
+                    <li>✓ Priority support</li>
+                    <li>✓ 24/7 uptime guarantee</li>
+                </ul>
+                <button class="btn" onclick="alert('Stripe integration coming soon! Demo features available.')">Start Free Trial</button>
             </div>
         </div>
-    </div>
 
-    <!-- FAQ Section -->
-    <div class="faq-section">
-        <div class="container">
-            <h2>Frequently Asked Questions</h2>
-            <div class="faq">
-                <div class="question">
-                    <h3>What is AI Email Automator Pro?</h3>
-                    <p>It's a powerful tool that uses artificial intelligence to automatically generate and send personalized email sequences to your audience.</p>
-                </div>
-                <div class="question">
-                    <h3>How does the AI work?</h3>
-                    <p>Our AI analyzes your input and generates highly personalized email content that resonates with your audience, increasing engagement rates.</p>
-                </div>
-                <div class="question">
-                    <h3>Can I cancel anytime?</h3>
-                    <p>Yes! You can cancel your subscription at any time with no cancellation fees or long-term commitments.</p>
-                </div>
-                <div class="question">
-                    <h3>What payment methods do you accept?</h3>
-                    <p>We accept all major credit cards, PayPal, and bank transfers for our enterprise customers.</p>
-                </div>
+        <!-- FAQ Section -->
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        <div class="faq">
+            <div class="question">
+                <h3>What is AI Email Automator Pro?</h3>
+                <p>It's a cutting-edge SaaS tool that uses artificial intelligence to automatically generate and send personalized email sequences, helping you save time and increase conversions.</p>
+            </div>
+            <div class="question">
+                <h3>How does the AI work?</h3>
+                <p>Our AI analyzes your audience and generates contextually relevant, personalized emails optimized for engagement and conversion rates.</p>
+            </div>
+            <div class="question">
+                <h3>Can I cancel anytime?</h3>
+                <p>Yes! There are no long-term contracts. You can cancel your subscription at any time without penalties.</p>
+            </div>
+            <div class="question">
+                <h3>Do you offer support?</h3>
+                <p>Absolutely! We provide 24/7 email support and a comprehensive knowledge base for all Pro Plan customers.</p>
             </div>
         </div>
-    </div>
 
-    <!-- Testimonials Section -->
-    <div class="testimonials-section">
-        <div class="container">
-            <h2>What Our Customers Say</h2>
-            <div class="testimonials">
-                <div class="testimonial">
-                    <div class="author">John Anderson</div>
-                    <div class="role">Marketing Director</div>
-                    <p>"This tool has transformed our email marketing. We've seen a 150% increase in open rates and our team saves 10+ hours per week."</p>
-                </div>
-                <div class="testimonial">
-                    <div class="author">Sarah Martinez</div>
-                    <div class="role">E-commerce Owner</div>
-                    <p>"The AI-generated sequences are so personalized, my customers feel like I wrote them individually. Conversions have doubled!"</p>
-                </div>
-                <div class="testimonial">
-                    <div class="author">Michael Chen</div>
-                    <div class="role">SaaS Founder</div>
-                    <p>"Best investment we made this year. The ROI is incredible and customer support is exceptional."</p>
-                </div>
-                <div class="testimonial">
-                    <div class="author">Emily Thompson</div>
-                    <div class="role">Content Strategist</div>
-                    <p>"Finally, a tool that gets email automation right. Highly recommended for anyone serious about email marketing."</p>
-                </div>
+        <!-- Testimonials Section -->
+        <h2 class="section-title">What Our Users Say</h2>
+        <div class="testimonials">
+            <div class="testimonial">
+                <div class="testimonial-rating">⭐⭐⭐⭐⭐</div>
+                <div class="testimonial-name">John Doe</div>
+                <p>"AI Email Automator Pro has been a game-changer for my business. The personalized sequences increased my open rates by 45% in just one month!"</p>
+            </div>
+            <div class="testimonial">
+                <div class="testimonial-rating">⭐⭐⭐⭐⭐</div>
+                <div class="testimonial-name">Jane Smith</div>
+                <p>"The AI-generated emails are incredibly relevant. I was skeptical at first, but the results speak for themselves. Highly recommended!"</p>
             </div>
         </div>
     </div>
 
     <!-- Footer -->
     <footer>
-        <div class="container">
-            <p>&copy; 2026 AI Email Automator Pro. All rights reserved.</p>
-            <p>Questions? Email us at support@aiemailautomator.com</p>
-        </div>
+        <p>&copy; 2026 AI Email Automator Pro. All rights reserved.</p>
     </footer>
 </body>
 </html>
